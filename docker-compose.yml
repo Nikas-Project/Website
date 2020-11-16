@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  nikas:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: nikas/website
+    container_name: nikas-website
+    restart: unless-stopped
+    working_dir: /usr/share/nginx/html
+    volumes:
+      - .:/usr/share/nginx/html
+    networks:
+      - nikas-website
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      # HTTPS
+      - "traefik.http.routers.nikas-website.rule=Host(`nikasproject.ir`)"
+      - "traefik.http.routers.nikas-website.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.nikas-website.entrypoints=websecure"
+      - "traefik.http.routers.nikas-website.service=nikas-website"
+      - "traefik.http.services.nikas-website.loadbalancer.server.port=80"
+      # HTTP
+      - "traefik.http.routers.nikas-website-http.rule=Host(`nikasproject.ir`)"
+      - "traefik.http.routers.nikas-website-http.entrypoints=web"
+      - "traefik.http.routers.nikas-website-http.middlewares=nikas-website-https@docker"
+      - "traefik.http.middlewares.nikas-website-https.redirectscheme.scheme=https"
+
+networks:
+  nikas-website:
+    external: false
+    driver: bridge
+  traefik:
+    external: true

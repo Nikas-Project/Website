@@ -75,6 +75,7 @@ nav {
 .changelog {
   background-color: var(--bg-color);
   padding: 2rem 0;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .changelog__item {

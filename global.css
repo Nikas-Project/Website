@@ -1,10 +1,10 @@
 /* css variables*/
 :root {
-  --primary-color: #432e30;
-  --primary-color-light: #8e7474;
-  --accent-color: #fe6a6b;
-  --accent-color-light: #ffe4e4;
-  --accent-color-dark: #b94b4c;
+  --primary-color: #0e2e00;
+  --primary-color-light: #548a3b;
+  --accent-color: #6dc248;
+  --accent-color-light: #bae5a6;
+  --accent-color-dark: #60a642;
   --white-color: #fafbfc;
   --light-gray-color: #c6cbd1;
   --medium-gray-color: #959da5;
@@ -18,7 +18,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Vazir FD", sans-serif;
   background-color: white;
 }
 
@@ -55,6 +55,7 @@ hr {
 .tab__container {
   position: relative;
   top: -15px;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .tab__container > ul {
@@ -125,6 +126,7 @@ hr {
   text-decoration: none;
   border: 0;
   transition: all 0.3s ease-out;
+  border-radius: 5px;
 }
 
 .button--primary:after {
@@ -136,6 +138,7 @@ hr {
   right: -0.4rem;
   top: -0.4rem;
   transition: all 0.3s ease-out;
+  border-radius: 3px;
 }
 
 .button--primary:hover {
@@ -152,6 +155,7 @@ hr {
   padding: 10px 22px;
   border: 2px solid var(--primary-color);
   transition: all 0.5s ease-out;
+  border-radius: 10px;
 }
 
 .button--secondary:hover {
@@ -308,8 +312,13 @@ table td:first-child {
 .footer {
   text-align: center;
   background-color: var(--primary-color);
-  padding: 2rem;
+  padding: 1rem;
   color: white;
+}
+
+.footer em {
+  color: red;
+  font-size: 14px;
 }
 
 @keyframes fadeUp {

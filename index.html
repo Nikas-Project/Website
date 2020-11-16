@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Scribbler - a codding landing page template for codrops</title>
+    <title>نیکاس</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -19,7 +19,6 @@
     />
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="landing.css" />
-    <link rel="author" href="humans.txt" />
   </head>
   <body>
     <nav>
@@ -27,169 +26,178 @@
       <ul class="menu">
         <div class="menu__item toggle"><span></span></div>
         <li class="menu__item">
-          <a href="doc.html" class="link link--dark"
-            ><i class="fa fa-book"></i> Documentation</a
-          >
+          <a href="doc.html" class="link link--dark">
+            مستندات
+            <em class="fa fa-book"></em>
+          </a>
         </li>
         <li class="menu__item">
-          <a href="" class="link link--dark"
-            ><i class="fa fa-github"></i> Github</a
-          >
+          <a href="" class="link link--dark">
+            گیت هاب
+            <em class="fa fa-github"></em>
+          </a>
         </li>
       </ul>
     </nav>
     <div class="hero">
-      <h1 class="hero__title">Scribbler</h1>
-      <p class="hero__description">Take your markdown notes in terminal</p>
+      <h1 class="hero__title">نیکاس</h1>
+      <p class="hero__description">اولین پلتفرم نظرگذاری پارسی</p>
     </div>
     <div class="hero__terminal">
-      <pre>
-        <!-- Place your demo code here -->
-        <code class="shell-session demo">hyperyolo ~ $ </code>
-      </pre>
+      <img src="demo.png" />
     </div>
     <div class="wrapper">
       <div class="installation">
-        <h3 class="section__title">Installation</h3>
+        <h3 class="section__title">نصب</h3>
         <div class="tab__container">
           <ul class="tab__menu">
-            <li class="tab active" data-tab="mac">mac</li>
-            <li class="tab" data-tab="linux">linux</li>
-            <li class="tab" data-tab="win">win</li>
+            <li class="tab active" data-tab="docker">Docker</li>
+            <li class="tab" data-tab="linux">Linux</li>
           </ul>
           <pre class="nohighlight code">
-            <code class="tab__pane active mac">$  brew install scribbler</code>
-            <code class="tab__pane linux">$  apt-get install scribbler</code>
-            <code class="tab__pane win">$  gem install scribbler</code>
+            <code class="tab__pane active docker">docker run nikasproject/server:stable</code>
+            <code class="tab__pane linux">nikas -c nikas.conf run</code>
           </pre>
         </div>
       </div>
       <div class="feature">
         <div class="feature__item">
-          <h3 class="section__title">Fast & Light</h3>
+          <h3 class="section__title">سریع</h3>
           <p>
-            Start writing your notes immediately in any terminal! No more time
-            wasted on navigating and opening your text editor.
+            عملکرد نیکاس به صورتی پیاده سازی شده که همه چیز خیلی سریع و بدون
+            موارد اضافه انجام میشه. از این رو تمامی عملیات ها در سریع ترین وقت
+            ممکن اجرا میشن.
           </p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">File Syncing</h3>
+          <h3 class="section__title">سبک</h3>
           <p>
-            Save your file in Dropbox then you can access to it from anywhere.
+            نیکاس در هر دو سمت سرور و کلاینت حجم کمی داشته و به سرعت بارگذاری می
+            شود. اسکریپت نهایی فقط 50 کیلوبایت حجم دارد.
           </p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">Secure</h3>
-          <p>Encrypt your notes optionally. No one can get to your secrets!</p>
-        </div>
-        <div class="feature__item">
-          <h3 class="section__title">Configuration</h3>
+          <h3 class="section__title">نگهداری شخصی</h3>
           <p>
-            Maintain all your settings in a single
-            <span class="code code--inline">config.json</span> file. Never need
-            to redo the setting every single time jotting down a note.
+            نیکاس به صورت self-hosted اجرا شده و روی آن کنترل کامل دارید. تمامی
+            عملیات نصب و تنظیم توسط خودتان روی سرور هاتون انجام میشه.
           </p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">Highlightings</h3>
+          <h3 class="section__title">برنامه موبایل</h3>
           <p>
-            For better readability, scribbler has a clean, beautiful color
-            scheme allow you to scan files fast.
+            برای نیکاس برنامه موبایل ساده ای نیز در نظر گرفته شده تا مشاهده و
+            مدیریت نظرات برای شما ساده تر بشه.
           </p>
         </div>
         <div class="feature__item">
-          <h3 class="section__title">Keybindings</h3>
+          <h3 class="section__title">پنل مدیریت</h3>
           <p>
-            You can expect common keybindings for scribbler. Customize
-            <span class="code code--inline">bindings.json</span> for your own
-            liking!
+            پنل مدیریت ساده و در عین حال کامل وجود دارد که تمام نیازهای شما رو
+            برطرف میکنه. مشاهده و مدیریت نظرات در این داشبورد به راحتی انجام
+            میشه.
           </p>
         </div>
-      </div>
-      <div class="keybinding">
-        <ul class="keybinding__detail">
-          <h3 class="keybinding__title">Default Keybindings</h3>
-          <li>
-            Quit without saving <span class="keybinding__label">Ctrl+C</span>
-          </li>
-          <li>Save <span class="keybinding__label">Cmd+S</span></li>
-          <li>Save and Quit <span class="keybinding__label">Ctrl+D</span></li>
-          <li>Undo <span class="keybinding__label">Cmd+Z</span></li>
-        </ul>
-        <ul class="keybinding__detail">
-          <h3 class="keybinding__title">Markdown Keybindings</h3>
-          <li>
-            <span class="keybinding__label">Ctrl+A</span> Insert Link Markdown
-          </li>
-          <li>
-            <span class="keybinding__label">Ctrl+I</span> Insert Image Markdown
-          </li>
-          <li>
-            <span class="keybinding__label">Ctrl+V</span> Insert YouTube Video
-          </li>
-          <li><span class="keybinding__label">Ctrl+T</span> Insert Table</li>
-        </ul>
+        <div class="feature__item">
+          <h3 class="section__title">تنظیمات کامل</h3>
+          <p>
+            برای نصب و تنظیم نیکاس تنظیمات متعددی قرار داده شده تا بتونید روی
+            تمام اجزای اون احاطه داشته باشید.
+          </p>
+        </div>
       </div>
       <div class="callout">
-        <p>Read our documentation for advanced keybindings and customization</p>
-        <a href="doc.html" class="button--primary">Documentation</a>
+        <p>
+          برای اطلاعات بیشتر در مورد راه اندازی و تنظیم به مستندات مراجعه کنید
+        </p>
+        <a href="doc.html" class="button--primary">مستندات</a>
       </div>
     </div>
     <div class="changelog">
       <div class="wrapper">
-        <h3 class="section__title">Changelog</h3>
+        <h3 class="section__title" style="text-align: center">لیست تغییرات</h3>
         <div class="changelog__item">
           <div class="changelog__meta">
-            <h4 class="changelog__title">v0.7</h4>
-            <small class="changelog__date">10/12/2017</small>
+            <h4 class="changelog__title">v1.1.0</h4>
+            <small class="changelog__date">Sep 1, 2020</small>
           </div>
           <div class="changelog__detail">
             <ul>
-              <li>Improving the writing workflow with better key bindings</li>
-              <li>Design updates</li>
-              <li>SSL Verification for web hooks</li>
-              <li>Render Emoji</li>
+              <li>Server</li>
+              <ul>
+                <li>Use hashed password</li>
+                <li>Fix config parser problems</li>
+              </ul>
+              <li>Admin</li>
+              <ul>
+                <li>Make RTL</li>
+                <li>Change theme & colors</li>
+                <li>
+                  Use Persian font (
+                  <a href="https://github.com/rastikerdar/vazir-font">Vazir</a>
+                  )
+                </li>
+                <li>Fix margin & size problems</li>
+              </ul>
+              <li>Client</li>
+              <ul>
+                <li>Make RTL</li>
+                <li>Simplify styles</li>
+                <li>
+                  Use Persian font (
+                  <a href="https://github.com/rastikerdar/vazir-font">Vazir</a>
+                  )
+                </li>
+                <li>Update font sizes</li>
+                <li>Add <span class="code code--inline">FA</span> for i18n</li>
+                <li>Remove all shadows</li>
+                <li>Fix margin problems</li>
+                <li>Use justify align</li>
+              </ul>
             </ul>
           </div>
         </div>
         <div class="changelog__item">
           <div class="changelog__meta">
-            <h4 class="changelog__title">v0.6</h4>
-            <small class="changelog__date">7/30/2017</small>
+            <h4 class="changelog__title">v1.0.1</h4>
+            <small class="changelog__date">Aug 1, 2020</small>
           </div>
           <div class="changelog__detail">
             <ul>
-              <li>Adding Unicode support</li>
-              <li>Basic text highlighting</li>
-              <li>Fresh Design</li>
+              <li>Use Gitlab CI</li>
+              <li>Change EOF</li>
+              <li>Add example files</li>
+              <li>
+                Fix <span class="code code--inline">Makefile</span> problems
+              </li>
+              <li>
+                Fix <span class="code code--inline">.gitignore</span> problems
+              </li>
             </ul>
           </div>
         </div>
         <div class="changelog__item">
           <div class="changelog__meta">
-            <h4 class="changelog__title">v0.5</h4>
-            <small class="changelog__date">5/10/2017</small>
+            <h4 class="changelog__title">v1.0.0</h4>
+            <small class="changelog__date">Jul 9, 2020</small>
           </div>
           <div class="changelog__detail">
             <ul>
-              <li>Save default md file in new folders</li>
-              <li>Ability to quick search on existing notes</li>
+              <li>First beta release</li>
+              <li>Migrate to Nikas</li>
+              <li>Dockerize project</li>
+              <li>Create <span class="code code--inline">Makefile</span></li>
+              <li>Publish python package</li>
             </ul>
           </div>
         </div>
         <div class="changelog__callout">
-          <a href="#" class="button--secondary">Checkout Full Log</a>
+          <a href="#" class="button--secondary">مشاهده لیست کامل</a>
         </div>
       </div>
     </div>
     <footer class="footer">
-      Scribbler is a free HTML template created exclusively for
-      <a
-        href="https://tympanus.net/codrops/"
-        target="_blank"
-        class="link link--light"
-        >Codrops</a
-      >.
+      نیکاس - اولین پلتفرم نظرگذاری پارسی - توسعه داده شده برای جامعه پارسی زبان
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>

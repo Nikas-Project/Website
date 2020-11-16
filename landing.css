@@ -101,6 +101,10 @@ nav {
   text-align: center;
 }
 
+.changelog__detail ul li a {
+  color: var(--accent-color-dark);
+}
+
 @media (max-width: 750px) {
   .hero__terminal {
     width: 70%;

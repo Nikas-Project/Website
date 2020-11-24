@@ -26,7 +26,7 @@ build image:
 push to dockerhub:
   stage: Push to registries
   only:
-    - master
+    - main
   script:
     - docker load -i image/dockerhub.tar
     - docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_TOKEN"
@@ -35,7 +35,7 @@ push to dockerhub:
 push to github:
   stage: Push to registries
   only:
-    - master
+    - main
   script:
     - docker load -i image/github.tar
     - docker login -u "$DOCKERHUB_USERNAME" -p "$GITHUB_TOKEN" docker.pkg.github.com
@@ -44,7 +44,7 @@ push to github:
 push to gitlab:
   stage: Push to registries
   only:
-    - master
+    - main
   script:
     - docker load -i image/gitlab.tar
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY

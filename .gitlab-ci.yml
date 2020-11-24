@@ -1,0 +1,51 @@
+image: docker:19
+
+variables:
+  DOCKER_DRIVER: overlay
+
+stages:
+  - Build image
+  - Push to registries
+
+services:
+  - docker:dind
+
+build image:
+  stage: Build image
+  script:
+    - docker build -t nikasproject/website:stable -t docker.pkg.github.com/nikas-project/website/website:latest -t $CI_REGISTRY/nikas-project/website:latest .
+    - mkdir image
+    - docker save nikasproject/website:stable > image/dockerhub.tar
+    - docker save docker.pkg.github.com/nikas-project/website/website:latest > image/github.tar
+    - docker save $CI_REGISTRY/nikas-project/website:latest > image/gitlab.tar
+  artifacts:
+    expire_in: 15 mins
+    paths:
+      - image
+
+push to dockerhub:
+  stage: Push to registries
+  only:
+    - master
+  script:
+    - docker load -i image/dockerhub.tar
+    - docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_TOKEN"
+    - docker push nikasproject/website:stable
+
+push to github:
+  stage: Push to registries
+  only:
+    - master
+  script:
+    - docker load -i image/github.tar
+    - docker login -u "$DOCKERHUB_USERNAME" -p "$GITHUB_TOKEN" docker.pkg.github.com
+    - docker push docker.pkg.github.com/nikas-project/website/website:latest
+
+push to gitlab:
+  stage: Push to registries
+  only:
+    - master
+  script:
+    - docker load -i image/gitlab.tar
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker push $CI_REGISTRY/nikas-project/website:latest

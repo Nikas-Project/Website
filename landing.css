@@ -85,6 +85,11 @@ nav {
   font-family: "Nunito Sans", sans-serif;
 }
 
+.changelog .section__title,
+.changelog .button--secondary {
+  font-family: "Vazir FD", sans-serif;
+}
+
 .changelog__item {
   display: -webkit-box;
   display: -ms-flexbox;

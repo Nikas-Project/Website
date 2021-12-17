@@ -35,7 +35,7 @@ nav {
 
 .hero__terminal img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   -webkit-box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.1);
 }
@@ -81,7 +81,7 @@ nav {
 /* changelog section */
 .changelog {
   background-color: var(--bg-color);
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
   font-family: "Nunito Sans", sans-serif;
 }
 
@@ -118,6 +118,11 @@ nav {
 
 .changelog__detail ul li a {
   color: var(--accent-color-dark);
+}
+
+.iran {
+  width: 100%;
+  margin-bottom: -6px;
 }
 
 @media (max-width: 750px) {

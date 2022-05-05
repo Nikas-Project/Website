@@ -15,6 +15,7 @@ jobs:
 
       - name: Lighthouse
         uses: foo-software/lighthouse-check-action@master
+        id: lighthouseCheck
         with:
           urls: "https://nikasproject.ir"
           device: "all"
@@ -23,3 +24,13 @@ jobs:
           gitHubAccessToken: ${{ github.token }}
           locale: "en"
           prCommentEnabled: true
+
+      - name: Verify Lighthouse Check results
+        uses: foo-software/lighthouse-check-status-action@master
+        with:
+          lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+          minAccessibilityScore: "80"
+          minBestPracticesScore: "100"
+          minPerformanceScore: "80"
+          minProgressiveWebAppScore: "65"
+          minSeoScore: "100"

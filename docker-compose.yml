@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.9"
 
 services:
   nikas:
@@ -28,6 +28,9 @@ services:
       - "traefik.http.routers.nikas-website-http.entrypoints=web"
       - "traefik.http.routers.nikas-website-http.middlewares=nikas-website-https@docker"
       - "traefik.http.middlewares.nikas-website-https.redirectscheme.scheme=https"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -O /dev/null http://localhost || exit 1"]
+      timeout: 10s
 
 networks:
   nikas-website:

@@ -1,11 +1,13 @@
 // utilities
 var get = function (selector, scope) {
   scope = scope ? scope : document;
+
   return scope.querySelector(selector);
 };
 
 var getAll = function (selector, scope) {
   scope = scope ? scope : document;
+
   return scope.querySelectorAll(selector);
 };
 
@@ -100,5 +102,6 @@ window.addEventListener("load", function () {
       icon.classList.remove("open");
     }
   }
+
   icon.addEventListener("click", showNav);
 });

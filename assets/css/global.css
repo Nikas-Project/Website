@@ -6,11 +6,8 @@
   --accent-color-light: #bae5a6;
   --accent-color-dark: #60a642;
   --white-color: #fafbfc;
-  --light-gray-color: #c6cbd1;
-  --medium-gray-color: #959da5;
-  --dark-gray-color: #444d56;
-  --bg-color: #f8f8fa;
-  --code-bg-color: #f0e8e8;
+  --light-gray-color: #dfdfdf;
+  --bg-color: #eaeee7;
 }
 
 /* normalized */
@@ -19,7 +16,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Vazirmatn RD UI FD, sans-serif;
-  background-color: white;
+  background-color: var(--bg-color);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -108,7 +105,7 @@ hr {
   font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas,
     Liberation Mono, Courier New, monospace;
   background: var(--bg-color);
-  border: 1px solid var(--code-bg-color);
+  border: 1px solid var(--light-gray-color);
   color: var(--primary-color-light);
   -webkit-user-select: text;
   -moz-user-select: text;
@@ -130,7 +127,7 @@ hr {
 .button--primary {
   padding: 10px 22px;
   background-color: var(--accent-color);
-  color: white;
+  color: var(--white-color);
   position: relative;
   text-decoration: none;
   border: 0;
@@ -289,7 +286,7 @@ table {
 
 table td,
 table th {
-  border: 1px solid var(--code-bg-color);
+  border: 1px solid var(--light-gray-color);
   padding: 0.8rem;
   font-weight: 300;
 }
@@ -298,7 +295,7 @@ table th {
   text-align: left;
   background-color: white;
   border-color: white;
-  border-bottom-color: var(--code-bg-color);
+  border-bottom-color: var(--light-gray-color);
 }
 
 table td:first-child {

@@ -1,9 +1,13 @@
 name: Lighthouse
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   lighthouse:
+    name: Check
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +35,6 @@ jobs:
           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
           minAccessibilityScore: "80"
           minBestPracticesScore: "100"
-          minPerformanceScore: "80"
+          minPerformanceScore: "65"
           minProgressiveWebAppScore: "65"
           minSeoScore: "100"
